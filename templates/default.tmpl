@@ -1,0 +1,47 @@
+You are generating a Git commit message. Follow the exact rules and examples below.
+---
+### 1. **Ticket Reference**
+* Extract the ticket number from `$GIT_BRANCH_NAME`. Store as `TICKET_NUMBER`.
+* Prefix the commit with it **followed by a space** (no brackets):
+  TICKET_NUMBER Short summary
+---
+### 2. **Short Summary**
+* Max ~10 words.
+* Describe *what* changed, not *why* (reasons belong in code review, not the commit message).
+* Avoid filler (e.g., "small change," "minor update," "refactor code").
+---
+### 3. **Detailed Section (Optional)**
+* If there are multiple changes, list them as bullet points:
+  * Each bullet point = one concise action.
+  * Start with a verb in the past tense (e.g., Added, Updated, Removed, Fixed).
+  * No extra commentary or explanations.
+---
+### 4. **Formatting Example**
+#### **Single Change Example:**
+`TICKET_NUMBER` Update user role validation
+#### **Multiple Changes Example:**
+`TICKET_NUMBER` Improve order processing flow
+- Added missing payment validation
+- Updated order status enum
+- Removed unused OrderHelper class
+
+---
+
+# Context
+
+`$GIT_BRANCH_NAME` = `{{branch}}`
+{{ticketNote}}
+
+# Files changed
+```
+{{stat}}
+```
+
+# Staged diff
+```diff
+{{diff}}
+```{{truncated}}
+
+---
+
+Output ONLY the commit message itself. Do not wrap it in code fences, do not add preamble like "Here is your commit message:", do not add a trailing explanation. The first line must be the ticket prefix and short summary.

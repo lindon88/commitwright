@@ -1,0 +1,45 @@
+{
+  "name": "commitwright",
+  "version": "0.1.0",
+  "description": "Generate ticket-prefixed git commit messages from staged changes using Ollama, OpenAI, Anthropic, the Claude Code CLI, or the Codex CLI. Custom prompt templates and persistent global config.",
+  "bin": {
+    "commitwright": "./bin/commitwright.js"
+  },
+  "main": "./src/index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node ./bin/commitwright.js",
+    "test": "node --test test/"
+  },
+  "keywords": [
+    "git",
+    "commit",
+    "commit-message",
+    "llm",
+    "ai",
+    "ollama",
+    "claude",
+    "anthropic",
+    "openai",
+    "codex"
+  ],
+  "files": [
+    "bin",
+    "src",
+    "templates",
+    "README.md"
+  ],
+  "author": "Lindon Camaj",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lindon88/commitwright.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lindon88/commitwright/issues"
+  },
+  "homepage": "https://github.com/lindon88/commitwright#readme"
+}
