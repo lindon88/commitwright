@@ -11,8 +11,7 @@
     "node": ">=18"
   },
   "scripts": {
-    "start": "node ./bin/commitwright.js",
-    "test": "node --test test/"
+    "start": "node ./bin/commitwright.js"
   },
   "keywords": [
     "git",
